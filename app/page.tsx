@@ -352,13 +352,13 @@ export default function Home() {
                   },
                   {
                     name: "Twitter / X",
-                    handle: "@vikshitkode",
-                    url: "https://twitter.com/vikshitkode",
+                    handle: "@KodeSaiVikshit",
+                    url: "https://x.com/KodeSaiVikshit",
                     icon: (
                       <img
                         src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/vecteezy_new-twitter-x-logo-twitter-icon-x-social-media-icon_42148611-btGZrb4lIZrQKOb7B6NidwKCFPZmh0.png"
                         alt="X (Twitter) Logo"
-                        className="w-6 h-6 object-contain"
+                        className="w-5 h-5 object-contain"
                       />
                     ),
                   },
