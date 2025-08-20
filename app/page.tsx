@@ -6,6 +6,9 @@ import { useEffect, useRef, useState } from "react"
 export default function Home() {
   const [activeSection, setActiveSection] = useState("")
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
+  const setSectionRef = (index: number) => (el: HTMLElement | null) => {
+  sectionsRef.current[index] = el;
+};
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,34 +31,30 @@ export default function Home() {
   }, [])
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    const header = document.querySelector("header")
+  const el = document.getElementById(sectionId);
+  const header = document.querySelector("header");
+  if (!el || !header) return;
 
-    if (element && header) {
-      const headerHeight = header.offsetHeight
-      const elementPosition = element.offsetTop
+  const headerHeight = (header as HTMLElement).offsetHeight;
+  const rect = el.getBoundingClientRect();
 
-      let offsetPosition
-      if (sectionId === "projects") {
-        const viewportHeight = window.innerHeight
-        // Calculate to center the content area in the viewport
-        const centerOffset = viewportHeight / 2 - 200 // 200px accounts for content height
-        offsetPosition = elementPosition - headerHeight + centerOffset
-      } else {
-        offsetPosition = elementPosition - headerHeight - 40
-      }
+  const elementTop = rect.top + window.scrollY;
+  const elementHeight = rect.height;
 
-      console.log("[v0] Scrolling to section:", sectionId)
-      console.log("[v0] Header height:", headerHeight)
-      console.log("[v0] Element position:", elementPosition)
-      console.log("[v0] Final scroll position:", offsetPosition)
+  // Available vertical space under the fixed header
+  const available = window.innerHeight - headerHeight;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
-    }
-  }
+  // Scroll so the element's center sits in the center of the available area
+  let target =
+    elementTop - headerHeight + Math.max(0, (elementHeight - available) / 2);
+
+  // Clamp to document bounds
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  target = Math.max(0, Math.min(target, maxScroll));
+
+  window.scrollTo({ top: target, behavior: "smooth" });
+};
+
 
   return (
     <div className="min-h-screen text-foreground relative">
@@ -85,7 +84,7 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-8 lg:px-16 pt-20">
         <header
           id="intro"
-          ref={(el) => (sectionsRef.current[0] = el)}
+          ref={setSectionRef(0)}
           className="min-h-[80vh] flex items-center opacity-0"
         >
           <div className="grid lg:grid-cols-5 gap-16 w-full">
@@ -100,7 +99,7 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  iOS Developer crafting native mobile experiences with
+                  iOS Developer crafting native mobile Applications with
                   <span className="text-gradient-primary font-semibold"> Swift</span>,
                   <span className="text-gradient-secondary font-semibold"> SwiftUI</span>, and
                   <span className="text-gradient-primary font-semibold"> modern iOS frameworks</span>.
@@ -154,7 +153,7 @@ export default function Home() {
           </div>
         </header>
 
-        <section id="work" ref={(el) => (sectionsRef.current[1] = el)} className="py-32 opacity-0 min-h-screen">
+        <section id="work" ref={setSectionRef(1)} className="py-32 opacity-0 min-h-screen">
           <div className="space-y-16">
             <div className="flex items-end justify-between">
               <h2 className="text-4xl font-light">
@@ -205,12 +204,12 @@ export default function Home() {
 
         <section
           id="projects"
-          ref={(el) => (sectionsRef.current[2] = el)}
+          ref={setSectionRef(2)}
           className="py-32 opacity-0 min-h-screen flex items-center"
         >
           <div className="space-y-16 w-full">
             <h2 className="text-4xl font-light text-center">
-              Personal <span className="text-gradient-secondary">Projects</span>
+              Personal <span className="text-gradient-secondary">iOS Apps</span>
             </h2>
 
             <div className="grid lg:grid-cols-2 gap-12">
@@ -299,7 +298,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={(el) => (sectionsRef.current[3] = el)} className="py-32 opacity-0 min-h-screen">
+        <section id="connect" ref={setSectionRef(3)} className="py-32 opacity-0 min-h-screen">
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <h2 className="text-4xl font-light">
