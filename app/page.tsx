@@ -7,8 +7,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("")
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
   const setSectionRef = (index: number) => (el: HTMLElement | null) => {
-  sectionsRef.current[index] = el;
-};
+    sectionsRef.current[index] = el;
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,29 +31,29 @@ export default function Home() {
   }, [])
 
   const scrollToSection = (sectionId: string) => {
-  const el = document.getElementById(sectionId);
-  const header = document.querySelector("header");
-  if (!el || !header) return;
+    const el = document.getElementById(sectionId);
+    const header = document.querySelector("header");
+    if (!el || !header) return;
 
-  const headerHeight = (header as HTMLElement).offsetHeight;
-  const rect = el.getBoundingClientRect();
+    const headerHeight = (header as HTMLElement).offsetHeight;
+    const rect = el.getBoundingClientRect();
 
-  const elementTop = rect.top + window.scrollY;
-  const elementHeight = rect.height;
+    const elementTop = rect.top + window.scrollY;
+    const elementHeight = rect.height;
 
-  // Available vertical space under the fixed header
-  const available = window.innerHeight - headerHeight;
+    // Available vertical space under the fixed header
+    const available = window.innerHeight - headerHeight;
 
-  // Scroll so the element's center sits in the center of the available area
-  let target =
-    elementTop - headerHeight + Math.max(0, (elementHeight - available) / 2);
+    // Scroll so the element's center sits in the center of the available area
+    let target =
+      elementTop - headerHeight + Math.max(0, (elementHeight - available) / 2);
 
-  // Clamp to document bounds
-  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-  target = Math.max(0, Math.min(target, maxScroll));
+    // Clamp to document bounds
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    target = Math.max(0, Math.min(target, maxScroll));
 
-  window.scrollTo({ top: target, behavior: "smooth" });
-};
+    window.scrollTo({ top: target, behavior: "smooth" });
+  };
 
 
   return (
@@ -70,9 +70,8 @@ export default function Home() {
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
-                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-foreground ${
-                  activeSection === section.id ? "text-foreground" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-foreground ${activeSection === section.id ? "text-foreground" : "text-muted-foreground"
+                  }`}
               >
                 {section.label}
               </button>
@@ -113,7 +112,12 @@ export default function Home() {
                   <div>Seattle, WA</div>
                 </div>
 
-                <button className="btn-gradient px-8 py-3 rounded-full font-medium text-white shadow-lg">
+                <button
+                  className="btn-gradient px-8 py-3 rounded-full font-medium text-white shadow-lg"
+                  onClick={() => scrollToSection("connect")}
+                  type="button"
+                  aria-controls="connect"
+                >
                   Get In Touch
                 </button>
               </div>
@@ -142,8 +146,8 @@ export default function Home() {
                     "Combine",
                     "CloudKit",
                     "MapKit",
-                    "Foundation ML",
-                    "XCTest"
+                    "XCTest",
+                    "Foundation ML"
                   ].map((skill) => (
                     <span key={skill} className="skill-tag-gradient px-3 py-1 text-xs rounded-full">
                       {skill}
