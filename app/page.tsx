@@ -124,7 +124,7 @@ export default function Home() {
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
                   <div className="text-foreground">Freelance iOS Developer</div>
-                  <div className="text-muted-foreground">@ Independent</div>
+                  <div className="text-muted-foreground">@ Indieveloper</div>
                   <div className="text-xs text-muted-foreground">2021 — Present</div>
                 </div>
               </div>
@@ -141,7 +141,9 @@ export default function Home() {
                     "MongoDB Realm",
                     "Combine",
                     "CloudKit",
+                    "MapKit",
                     "Foundation ML",
+                    "XCTest"
                   ].map((skill) => (
                     <span key={skill} className="skill-tag-gradient px-3 py-1 text-xs rounded-full">
                       {skill}
@@ -169,7 +171,7 @@ export default function Home() {
                   role: "iOS Developer",
                   company: "Freelancer",
                   description:
-                    "Built comprehensive health tracking app using HealthKit and SwiftData for seamless data management.",
+                    "Designed and developed a comprehensive health tracking app leveraging HealthKit to integrate real-time fitness and wellness data. Implemented SwiftData for efficient, local-first data management with seamless syncing across devices. Built features for activity tracking, weight monitoring, and step analysis with intuitive SwiftUI interfaces. Optimized performance and ensured data privacy while delivering a clean, user-friendly experience tailored for long-term health insights.",
                   tech: ["SwiftUI", "HealthKit", "SwiftData"],
                 },
               ].map((job, index) => (
