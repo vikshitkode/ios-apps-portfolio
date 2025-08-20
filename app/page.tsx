@@ -31,6 +31,19 @@ export default function Home() {
     return () => observer.disconnect()
   }, [])
 
+  // press R on Keyboard to go to Resume Section
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === "r") {
+        e.preventDefault()
+        scrollToSection("resume")
+      }
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [])
+
+
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
     const header = document.querySelector("header");
@@ -65,6 +78,7 @@ export default function Home() {
             {[
               { id: "intro", label: "HOME" },
               { id: "work", label: "EXPERIENCE" },
+              { id: "resume", label: "RESUME" },
               { id: "projects", label: "PROJECTS" },
               { id: "connect", label: "CONNECT" },
             ].map((section) => (
@@ -209,9 +223,110 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="resume" ref={setSectionRef(2)} className="py-32 opacity-0 min-h-screen">
+          <div className="space-y-10">
+            <div className="flex items-end justify-between">
+              <h2 className="text-4xl font-light">
+                <span className="text-gradient-primary">Resume</span>
+              </h2>
+              <div className="text-sm text-muted-foreground font-mono">Updated · 2025</div>
+            </div>
+
+            <div className="grid lg:grid-cols-12 gap-8">
+              {/* Left: Actions + Highlights */}
+              <div className="lg:col-span-5 space-y-6">
+                <div className="flex gap-8">
+                  {/* View (link card like screenshot) */}
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start gap-3 rounded-md"
+                    aria-label="View Resume PDF"
+                  >
+                    {/* up-right arrow (no circle) */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-1 h-4 w-4 text-blue-500 group-hover:text-blue-600 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M6 18L18 6" strokeLinecap="round" />
+                      <path d="M11 6h7v7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+
+                    <div className="leading-tight">
+                      <div className="font-semibold text-foreground">View</div>
+                      <div className="text-xs font-semibold text-muted-foreground">August 20, 2025</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="/resume.pdf"
+                    download
+                    className="group flex items-start gap-3 rounded-md"
+                    aria-label="Download Resume PDF"
+                  >
+                    {/* download arrow + circle */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-0.5 h-5 w-5 text-blue-500 group-hover:text-blue-600 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      {/* Circle outline */}
+                      <circle cx="12" cy="12" r="10" />
+                      {/* Arrow down */}
+                      <path d="M12 8v8m0 0l-3-3m3 3l3-3" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+
+
+                    <div className="leading-tight">
+                      <div className="font-semibold text-foreground">Download</div>
+                      <div className="text-xs font-semibold text-muted-foreground">August 20, 2025</div>
+                      <div className="text-xs font-semibold text-muted-foreground">8 KB</div>
+                    </div>
+                  </a>
+                </div>
+
+                <div className="space-y-7 text-muted-foreground leading-relaxed h-full flex">
+                  <div className="flex flex-col justify-between">
+                    <h3 className="text-lg font-normal">
+                      Computer Science graduate student specializing in iOS development with
+                      SwiftUI, UIKit, SwiftData, and RESTful API integration. Experienced in
+                      building user-centered, high-performance apps with modern Swift best
+                      practices. Passionate about crafting intuitive, accessible, and impactful
+                      experiences for Apple platforms.
+                    </h3>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Right: Embedded preview */}
+              <div className="lg:col-span-7">
+                <div className="card-gradient-border rounded-lg overflow-hidden">
+                  <div className="card-gradient-border rounded-lg overflow-hidden">
+                    <object
+                      data="/resume.pdf#view=FitH&toolbar=0&navpanes=0&page=1&pagemode=none"
+                      type="application/pdf"
+                      className="w-full h-[70vh] bg-background pointer-events-none select-none"
+                      aria-label="Resume preview"
+                    />
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           id="projects"
-          ref={setSectionRef(2)}
+          ref={setSectionRef(3)}
           className="py-32 opacity-0 min-h-screen flex items-center"
         >
           <div className="space-y-16 w-full">
@@ -305,7 +420,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={setSectionRef(3)} className="py-32 opacity-0 min-h-screen">
+        <section id="connect" ref={setSectionRef(4)} className="py-32 opacity-0 min-h-screen">
           <div className="grid lg:grid-cols-2 gap-16">
             <div className="space-y-8">
               <h2 className="text-4xl font-light">
@@ -409,7 +524,6 @@ export default function Home() {
               <div className="text-sm text-muted-foreground">© 2025 Sai Vikshit Kode. All rights reserved.</div>
               <div className="text-xs text-muted-foreground">Built with Next.js</div>
             </div>
-
 
 
             <button className="group p-3 rounded-lg">
