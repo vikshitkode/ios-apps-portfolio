@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "Sai Vikshit Kode - iOS Developer",
   description: "Crafting native mobile Applications with Swift, SwiftUI, and UIKit",
   icons: {
-    icon: "/favicon.png",
+    icon: "/icons8-ios-logo-color-512.png",
   },
   generator: "v0.app",
 }
