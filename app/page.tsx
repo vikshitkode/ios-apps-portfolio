@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
@@ -409,23 +410,18 @@ export default function Home() {
               <div className="text-xs text-muted-foreground">Built with Next.js</div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                <svg
-                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-              </button>
-            </div>
+
+
+            <button className="group p-3 rounded-lg">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg"
+                alt="Apple Rainbow Logo"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </button>
+
           </div>
         </footer>
       </main>
