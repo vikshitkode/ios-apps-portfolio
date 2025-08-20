@@ -12,6 +12,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Sai Vikshit Kode - iOS Developer",
   description: "Crafting native mobile Applications with Swift, SwiftUI, and UIKit",
+  icons: {
+    icon: "/favicon.png",
+  },
   generator: "v0.app",
 }
 
