@@ -1,7 +1,6 @@
 [build]
-  command = "pnpm build"
-  publish = "dist"        # or ".next/out" / "build" depending on your framework
+  command = "npm run build"
+  publish = ".next"
 
-[build.environment]
-  NODE_VERSION = "20.14.0"   # LTS recommended; align with your local
-  PNPM_VERSION = "9.0.0"     # or your exact pnpm major/minor used locally
+[plugins]
+  package = "@netlify/plugin-nextjs"
