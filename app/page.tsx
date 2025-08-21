@@ -307,17 +307,14 @@ export default function Home() {
 
               {/* Right: Embedded preview */}
               <div className="lg:col-span-7">
-                <div className="card-gradient-border rounded-lg overflow-hidden">
-                  <div className="card-gradient-border rounded-lg overflow-hidden">
-                    <iframe
-                      src="/resume.pdf#view=FitH&toolbar=0&navpanes=0"
-                      className="w-full h-[70vh] border-0"
-                    />
-
-                  </div>
-
-
+                <div className="card-gradient-border rounded-lg overflow-hidden bg-white">
+                  <iframe
+                    src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
+                    className="block w-full h-[70vh] border-0 bg-white"
+                    title="Resume PDF"
+                  />
                 </div>
+
               </div>
             </div>
           </div>
