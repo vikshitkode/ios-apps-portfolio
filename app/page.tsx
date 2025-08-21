@@ -309,12 +309,11 @@ export default function Home() {
               <div className="lg:col-span-7">
                 <div className="card-gradient-border rounded-lg overflow-hidden">
                   <div className="card-gradient-border rounded-lg overflow-hidden">
-                    <object
-                      data="/resume.pdf#view=FitH&toolbar=0&navpanes=0&page=1&pagemode=none"
-                      type="application/pdf"
-                      className="w-full h-[70vh] bg-background pointer-events-none select-none"
-                      aria-label="Resume preview"
+                    <iframe
+                      src="/resume.pdf#view=FitH&toolbar=0&navpanes=0"
+                      className="w-full h-[70vh] border-0"
                     />
+
                   </div>
 
 
