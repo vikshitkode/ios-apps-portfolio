@@ -186,13 +186,21 @@ export default function Home() {
             <div className="space-y-12">
               {[
                 {
+                  year: "2023-2025",
+                  role: "Market Research Analyst",
+                  company: "Seattle University",
+                  description:
+                    "Contributed to Seattle University’s Graduate, Executive, and Professional Education (GEPE) department by strategizing market research to achieve impactful results. Conducted competitor analysis, analyzed datasets with Lightcast, and optimized CRM data in Slate to improve outreach accuracy. Developed and implemented marketing initiatives that positioned Seattle University effectively in the competitive education market while driving enrollment opportunities.",
+                  tech: ["Slate CRM", "Lightcast", "Data Analysis", "Marketing Strategy"],
+                },
+                {
                   year: "2021-2023",
                   role: "iOS Developer",
                   company: "Freelancer",
                   description:
                     "Designed and developed a comprehensive health tracking app leveraging HealthKit to integrate real-time fitness and wellness data. Implemented SwiftData for efficient, local-first data management with seamless syncing across devices. Built features for activity tracking, weight monitoring, and step analysis with intuitive SwiftUI interfaces. Optimized performance and ensured data privacy while delivering a clean, user-friendly experience tailored for long-term health insights.",
                   tech: ["SwiftUI", "HealthKit", "SwiftData"],
-                },
+                }
               ].map((job, index) => (
                 <div key={index} className="group card-gradient-border grid lg:grid-cols-12 gap-8 py-8 rounded-lg px-6">
                   <div className="lg:col-span-2">
@@ -219,6 +227,7 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+
             </div>
           </div>
         </section>
