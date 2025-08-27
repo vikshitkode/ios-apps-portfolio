@@ -116,6 +116,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -131,6 +132,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -205,40 +207,109 @@
     -webkit-mask-composite: xor;
   }
 
+  /* --- Animated aurora blobs --- */
+  @keyframes blob {
+
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+
+    33% {
+      transform: translate(10%, -6%) scale(1.08);
+    }
+
+    66% {
+      transform: translate(-8%, 8%) scale(0.96);
+    }
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* utility classes (works without touching tailwind.config) */
+  .animate-blob {
+    animation: blob 28s ease-in-out infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* stronger, still tasteful */
+.aurora-wash {
+  background:
+    /* soft base wash so white isn't stark */
+    linear-gradient(180deg, rgba(250,250,255,0.55) 0%, rgba(255,255,255,0.25) 35%, transparent 100%),
+
+    /* main “aurora” blobs (higher alpha + larger radii) */
+    radial-gradient(1300px 700px at 12% 8%,   rgba(255, 0, 153, 0.30),  transparent 60%),
+    radial-gradient(1100px 600px at 88% 18%,  rgba(  0,163,255, 0.32), transparent 62%),
+    radial-gradient(1200px 800px at 50% 86%,  rgba(124, 58,237, 0.36), transparent 63%);
+
+  background-size: 200% 200%;
+  animation: gradientMove 45s ease-in-out infinite;
+
+  /* gentle pop without hurting text */
+  filter: saturate(1.15) contrast(1.05);
+}
+
+
+  /* respect accessibility */
+  @media (prefers-reduced-motion: reduce) {
+
+    .animate-blob,
+    .aurora-wash {
+      animation: none !important;
+    }
+  }
+
+
   /* Enhanced multi-color dynamic gradients with more vibrant colors */
   .apple-gradient-light {
-    background: linear-gradient(
-      135deg,
-      #0a0a0a 0%,
-      #1a1a2e 15%,
-      #16213e 25%,
-      #0f3460 35%,
-      #533483 45%,
-      #7209b7 55%,
-      #a663cc 65%,
-      #ff6b6b 75%,
-      #ff8e53 85%,
-      #ffa726 100%
-    );
+    background: linear-gradient(135deg,
+        #0a0a0a 0%,
+        #1a1a2e 15%,
+        #16213e 25%,
+        #0f3460 35%,
+        #533483 45%,
+        #7209b7 55%,
+        #a663cc 65%,
+        #ff6b6b 75%,
+        #ff8e53 85%,
+        #ffa726 100%);
     background-size: 600% 600%;
     animation: gradientShift 20s ease-in-out infinite;
   }
 
   .apple-gradient-dark {
-    background: linear-gradient(
-      135deg,
-      #000000 0%,
-      #0d1421 12%,
-      #1a1a2e 20%,
-      #16213e 30%,
-      #0f3460 40%,
-      #533483 50%,
-      #7209b7 60%,
-      #a663cc 70%,
-      #ff6b6b 80%,
-      #ff8e53 90%,
-      #ffa726 100%
-    );
+    background: linear-gradient(135deg,
+        #000000 0%,
+        #0d1421 12%,
+        #1a1a2e 20%,
+        #16213e 30%,
+        #0f3460 40%,
+        #533483 50%,
+        #7209b7 60%,
+        #a663cc 70%,
+        #ff6b6b 80%,
+        #ff8e53 90%,
+        #ffa726 100%);
     background-size: 600% 600%;
     animation: gradientShift 20s ease-in-out infinite;
   }
@@ -248,18 +319,23 @@
     0% {
       background-position: 0% 50%;
     }
+
     20% {
       background-position: 80% 20%;
     }
+
     40% {
       background-position: 100% 80%;
     }
+
     60% {
       background-position: 20% 100%;
     }
+
     80% {
       background-position: 80% 40%;
     }
+
     100% {
       background-position: 0% 50%;
     }

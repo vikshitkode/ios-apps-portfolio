@@ -72,7 +72,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen text-foreground relative">
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 border-b border-border/20">
+      <header className="fixed top-0 left-0 right-0 z-50 
+                   bg-background/2 backdrop-blur-lg">
         <nav className="max-w-4xl mx-auto px-8 lg:px-16 py-6">
           <div className="flex items-center justify-center gap-12">
             {[
@@ -544,6 +545,26 @@ export default function Home() {
           </div>
         </footer>
       </main>
+      {/* Animated background layer (non-interactive, behind content) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+      >
+        {/* moving wash (very subtle) */}
+        <div className="absolute inset-0 aurora-wash" />
+
+        {/* soft blobs */}
+        <div className="absolute -top-24 -left-24 h-[42rem] w-[42rem] rounded-full blur-3xl opacity-40
+                  bg-pink-400/25 dark:bg-pink-500/20 animate-blob" />
+        <div className="absolute top-1/3 -right-24 h-[36rem] w-[36rem] rounded-full blur-3xl opacity-35
+                  bg-indigo-400/25 dark:bg-indigo-500/20 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-24 left-1/4 h-[40rem] w-[40rem] rounded-full blur-3xl opacity-35
+                  bg-emerald-400/25 dark:bg-emerald-500/20 animate-blob animation-delay-4000" />
+
+        {/* vignette to keep edges calm and text readable */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
+      </div>
+
     </div>
   )
 }
