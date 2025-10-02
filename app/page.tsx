@@ -351,15 +351,15 @@ export default function Home() {
 
               </div>
 
-              {/* Right: Embedded preview */} 
-              <div className="lg:col-span-7"> 
-                <div className="card-gradient-border rounded-lg overflow-hidden bg-white"> 
-                  <iframe 
-                  src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1" 
-                  className="block w-full h-[100vh] border-0 bg-white" 
-                  title="Resume PDF" 
-                  /> 
-                </div> 
+              {/* Right: Embedded preview */}
+              <div className="lg:col-span-7">
+                <div className="card-gradient-border rounded-lg overflow-hidden bg-white">
+                  <iframe
+                    src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
+                    className="block w-full h-[100vh] border-0 bg-white"
+                    title="Resume PDF"
+                  />
+                </div>
               </div>
 
             </div>
@@ -414,6 +414,25 @@ export default function Home() {
                       </svg>
                       View on GitHub
                     </a>
+
+                    {/* App Store Link */}
+                    <div className="pt-2">
+                      <a
+                        href="https://apps.apple.com/us/app/step-buddy-tracker/id6752374531"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => {
+                          console.log("[v0] Step Buddy App Store link clicked")
+                          console.log("[v0] Link href:", e.currentTarget.href)
+                        }}
+                        className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105 relative z-10 cursor-pointer"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 384 512">
+                          <path d="M318.7 268.7c-.2-37.6 16.4-65.9 50-86.5-18.8-26.9-46.6-41.8-82.5-44.8-34.7-2.9-72.7 20.7-86.3 20.7-14 0-48.7-19.7-75.5-19.2-39.1.6-72.3 22.6-91.1 57.4-39 67.9-10 168.5 28 223.6 18.6 26.9 40.8 57 70.1 55.8 27.8-1.1 38.5-18 72.3-18 33.4 0 43.4 18 73 17.5 30.3-.5 49.5-27.4 67.9-54.4 21.4-31.2 30.1-61.4 30.4-62.9-0.8-0.3-58.3-22.3-58.4-88.2zM257.5 85.6c15.9-19.3 26.6-46.1 23.7-72.9-22.9.9-50.6 15.2-66.9 34.5-14.7 17.1-27.6 44.9-24.2 71.1 25.7 2 52-13 67.4-32.7z" />
+                        </svg>
+                        View on App Store
+                      </a>
+                    </div>
                   </div>
                 </div>
               </article>
