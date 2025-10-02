@@ -176,96 +176,96 @@ export default function Home() {
         </header>
 
         <section id="work" ref={setSectionRef(1)} className="py-32 opacity-0 min-h-screen">
-  <div className="space-y-16">
-    <div className="flex items-end justify-between">
-      <h2 className="text-4xl font-light">
-        <span className="text-gradient-primary">Experience</span>
-      </h2>
-      <div className="text-sm text-muted-foreground font-mono">2021 — Present</div>
-    </div>
-
-    <div className="space-y-12">
-      {[
-        // --- NEW: iOS Developer Intern (most recent) ---
-        {
-          year: "Oct 2025 — Present",
-          role: "iOS Developer Intern",
-          company: "Alervio Inc.",
-          description:
-            "Built Swift/SwiftUI features (MVVM) including auth, local persistence, and push notifications following Apple HIG. Shipped iteratively to TestFlight/App Store, wrote XCTest unit/UI tests, and improved stability via Firebase Crashlytics monitoring and targeted fixes.",
-          tech: ["Swift", "SwiftUI", "MVVM", "XCTest", "Firebase Crashlytics", "TestFlight"],
-        },
-
-        // --- NEW: Mobile Developer Intern ---
-        {
-          year: "Dec 2024 — Apr 2025",
-          role: "Mobile Developer Intern",
-          company: "Seatech Solutions",
-          description:
-            "Delivered production iOS features in Swift/SwiftUI/UIKit using MVVM, integrating REST APIs and responsive AutoLayout. Managed TestFlight pipelines, coordinated App Store submissions, and iterated quickly with stakeholders to meet sprint goals.",
-          tech: ["Swift", "SwiftUI", "UIKit", "MVVM", "REST APIs", "AutoLayout", "TestFlight"],
-        },
-
-        // --- NEW: Software Engineer Intern ---
-        {
-          year: "Jun 2024 — Aug 2024",
-          role: "Software Engineer Intern",
-          company: "Quadrant Technologies",
-          description:
-            "Built portal features using React + Flask + PostgreSQL and automated routine tasks with lightweight AI integrations. Reduced manual workflows by ~30%, collaborated across backend/QA, and maintained CI for reliable deployments.",
-          tech: ["React", "Flask", "PostgreSQL", "CI/CD", "Automation"],
-        },
-
-        // --- DO NOT TOUCH: Market Research Analyst (unchanged content) ---
-        {
-          year: "2023 — 2025",
-          role: "Market Research Analyst",
-          company: "Seattle University",
-          description:
-            "Contributed to Seattle University’s Graduate, Executive, and Professional Education (GEPE) department by strategizing market research to achieve impactful results. Conducted competitor analysis, analyzed datasets with Lightcast, and optimized CRM data in Slate to improve outreach accuracy. Developed and implemented marketing initiatives that positioned Seattle University effectively in the competitive education market while driving enrollment opportunities.",
-          tech: ["Slate CRM", "Lightcast", "Data Analysis", "Marketing Strategy"],
-        },
-
-        // --- NEW: iOS Developer (Freelance) ---
-        {
-          year: "Mar 2021 — Jun 2023",
-          role: "iOS Developer (Freelance / Client Projects)",
-          company: "Self-Employed",
-          description:
-            "Delivered 3+ iOS apps with Swift/SwiftUI/UIKit using MVVM + Coordinator. Integrated REST APIs, deep links, and push notifications; set up CI/CD (GitHub Actions/TestFlight) to cut release time by ~40% and maintained >95% crash-free sessions.",
-          tech: ["Swift", "SwiftUI", "UIKit", "MVVM", "Coordinator", "CI/CD", "TestFlight"],
-        },
-      ].map((job, index) => (
-        <div key={index} className="group card-gradient-border grid lg:grid-cols-12 gap-8 py-8 rounded-lg px-6">
-          <div className="lg:col-span-2">
-            <div className="text-lg font-light text-muted-foreground">{job.year}</div>
-          </div>
-
-          <div className="lg:col-span-6 space-y-3">
-            <div>
-              <h3 className="text-xl font-medium">{job.role}</h3>
-              <div className="text-muted-foreground">{job.company}</div>
+          <div className="space-y-16">
+            <div className="flex items-end justify-between">
+              <h2 className="text-4xl font-light">
+                <span className="text-gradient-primary">Experience</span>
+              </h2>
+              <div className="text-sm text-muted-foreground font-mono">2021 — Present</div>
             </div>
-            <p className="text-muted-foreground leading-relaxed max-w-lg">
-              {job.description}
-            </p>
-          </div>
 
-          <div className="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end">
-            {job.tech.map((tech) => (
-              <span
-                key={tech}
-                className="px-2 py-1 text-xs text-muted-foreground rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
-              >
-                {tech}
-              </span>
-            ))}
+            <div className="space-y-12">
+              {[
+                // --- NEW: iOS Developer Intern (most recent) ---
+                {
+                  year: "Oct 2025 — Present",
+                  role: "iOS Developer Intern",
+                  company: "Alervio Inc.",
+                  description:
+                    "Built Swift/SwiftUI features (MVVM) including auth, local persistence, and push notifications following Apple HIG. Shipped iteratively to TestFlight/App Store, wrote XCTest unit/UI tests, and improved stability via Firebase Crashlytics monitoring and targeted fixes.",
+                  tech: ["Swift", "SwiftUI", "MVVM", "XCTest", "Firebase Crashlytics", "TestFlight"],
+                },
+
+                // --- NEW: Mobile Developer Intern ---
+                {
+                  year: "Dec 2024 — Apr 2025",
+                  role: "Mobile Developer Intern",
+                  company: "Seatech Solutions",
+                  description:
+                    "Delivered production iOS features in Swift/SwiftUI/UIKit using MVVM, integrating REST APIs and responsive AutoLayout. Managed TestFlight pipelines, coordinated App Store submissions, and iterated quickly with stakeholders to meet sprint goals.",
+                  tech: ["Swift", "SwiftUI", "UIKit", "MVVM", "REST APIs", "AutoLayout", "TestFlight"],
+                },
+
+                // --- NEW: Software Engineer Intern ---
+                {
+                  year: "Jun 2024 — Aug 2024",
+                  role: "Software Engineer Intern",
+                  company: "Quadrant Technologies",
+                  description:
+                    "Built portal features using React + Flask + PostgreSQL and automated routine tasks with lightweight AI integrations. Reduced manual workflows by ~30%, collaborated across backend/QA, and maintained CI for reliable deployments.",
+                  tech: ["React", "Flask", "PostgreSQL", "CI/CD", "Automation"],
+                },
+
+                // --- DO NOT TOUCH: Market Research Analyst (unchanged content) ---
+                {
+                  year: "2023 — 2025",
+                  role: "Market Research Analyst",
+                  company: "Seattle University",
+                  description:
+                    "Contributed to Seattle University’s Graduate, Executive, and Professional Education (GEPE) department by strategizing market research to achieve impactful results. Conducted competitor analysis, analyzed datasets with Lightcast, and optimized CRM data in Slate to improve outreach accuracy. Developed and implemented marketing initiatives that positioned Seattle University effectively in the competitive education market while driving enrollment opportunities.",
+                  tech: ["Slate CRM", "Lightcast", "Data Analysis", "Marketing Strategy"],
+                },
+
+                // --- NEW: iOS Developer (Freelance) ---
+                {
+                  year: "Mar 2021 — Jun 2023",
+                  role: "iOS Developer (Freelance / Client Projects)",
+                  company: "Self-Employed",
+                  description:
+                    "Delivered 3+ iOS apps with Swift/SwiftUI/UIKit using MVVM + Coordinator. Integrated REST APIs, deep links, and push notifications; set up CI/CD (GitHub Actions/TestFlight) to cut release time by ~40% and maintained >95% crash-free sessions.",
+                  tech: ["Swift", "SwiftUI", "UIKit", "MVVM", "Coordinator", "CI/CD", "TestFlight"],
+                },
+              ].map((job, index) => (
+                <div key={index} className="group card-gradient-border grid lg:grid-cols-12 gap-8 py-8 rounded-lg px-6">
+                  <div className="lg:col-span-2">
+                    <div className="text-lg font-light text-muted-foreground">{job.year}</div>
+                  </div>
+
+                  <div className="lg:col-span-6 space-y-3">
+                    <div>
+                      <h3 className="text-xl font-medium">{job.role}</h3>
+                      <div className="text-muted-foreground">{job.company}</div>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed max-w-lg">
+                      {job.description}
+                    </p>
+                  </div>
+
+                  <div className="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end">
+                    {job.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 text-xs text-muted-foreground rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
 
 
         <section id="resume" ref={setSectionRef(2)} className="py-32 opacity-0 min-h-screen">
@@ -339,28 +339,24 @@ export default function Home() {
                 <div className="space-y-7 text-muted-foreground leading-relaxed h-full flex">
                   <div className="flex flex-col justify-between">
                     <h3 className="text-lg font-normal">
-                      Computer Science graduate student specializing in iOS development with
-                      SwiftUI, UIKit, SwiftData, and RESTful API integration. Experienced in
-                      building user-centered, high-performance apps with modern Swift best
-                      practices. Passionate about crafting intuitive, accessible, and impactful
-                      experiences for Apple platforms.
+                      iOS Developer with hands-on experience building and shipping production-grade apps using Swift, SwiftUI, and UIKit. Skilled in
+                      MVVM/MVI architecture, RESTful API integration, and fitness-focused features powered by HealthKit, Charts, and SwiftData.
+                      Published multiple apps to the App Store, including a HealthKit-powered fitness tracker (StepBuddy), achieving 95%+ crash-free
+                      sessions. Experienced in TestFlight/App Store releases, Firebase crash monitoring, and iterative improvements. Passionate about
+                      building data-informed, iterative fitness and performance visualizations (VO2 Max, heart rate zones, recovery trends) that unlock
+                      human potential.
                     </h3>
                   </div>
                 </div>
 
               </div>
 
-              {/* Right: Embedded preview */}
-              <div className="lg:col-span-7">
-                <div className="card-gradient-border rounded-lg overflow-hidden bg-white">
-                  <iframe
-                    src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
-                    className="block w-full h-[70vh] border-0 bg-white"
-                    title="Resume PDF"
-                  />
-                </div>
+              <iframe
+                src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none"
+                className="block w-full h-[100vh] border-0 bg-white"
+                title="Resume PDF"
+              />
 
-              </div>
             </div>
           </div>
         </section>
