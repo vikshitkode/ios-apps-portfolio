@@ -376,7 +376,7 @@ export default function Home() {
               Personal <span className="text-gradient-secondary">iOS Apps</span>
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-2 gap-12">
               <article className="group card-gradient-border p-8 rounded-lg">
                 <div className="space-y-6 text-center">
                   {/* App Icon */}
@@ -477,6 +477,74 @@ export default function Home() {
                   </div>
                 </div>
               </article>
+
+              {/* NEW: CulinAI */}
+              <article className="group card-gradient-border p-8 rounded-lg">
+                <div className="space-y-6 text-center">
+                  <div className="flex justify-center">
+                    {/* Replace src with your CulinAI icon if you have a hosted URL */}
+                    <img
+                      src="https://apps.apple.com/us/app/culinai/id6753957642?mt=8&uo=4"
+                      alt="CulinAI App Icon"
+                      className="w-42 h-42 rounded-2xl object-contain"
+                    />
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-medium">CulinAI</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      On-device recipe generator powered by Apple’s Foundation Models. Turn a few ingredients into beautiful,
+                      step-by-step recipes—private, fast, offline.
+                    </p>
+                  </div>
+
+                  <div className="pt-4">
+                    <a
+                      href="https://apps.apple.com/us/app/culinai/id6753957642"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-37.6 16.4-65.9 50-86.5-18.8-26.9-46.6-41.8-82.5-44.8-34.7-2.9-72.7 20.7-86.3 20.7-14 0-48.7-19.7-75.5-19.2-39.1.6-72.3 22.6-91.1 57.4-39 67.9-10 168.5 28 223.6 18.6 26.9 40.8 57 70.1 55.8 27.8-1.1 38.5-18 72.3-18 33.4 0 43.4 18 73 17.5 30.3-.5 49.5-27.4 67.9-54.4 21.4-31.2 30.1-61.4 30.4-62.9-0.8-0.3-58.3-22.3-58.4-88.2zM257.5 85.6c15.9-19.3 26.6-46.1 23.7-72.9-22.9.9-50.6 15.2-66.9 34.5-14.7 17.1-27.6 44.9-24.2 71.1 25.7 2 52-13 67.4-32.7z" /></svg>
+                      View on App Store
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              {/* NEW: SeaTech Solutions */}
+              <article className="group card-gradient-border p-8 rounded-lg">
+                <div className="space-y-6 text-center">
+                  <div className="flex justify-center">
+                    {/* Replace src with your SeaTech Solutions icon if you have a hosted URL */}
+                    <img
+                      src="public/culinai-ios.png"
+                      alt="SeaTech Solutions App Icon"
+                      className="w-42 h-42 rounded-2xl object-contain"
+                    />
+                  </div>
+
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-medium">SeaTech Solutions</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Consulting companion app showcasing services, contact, and quick actions—built with SwiftUI and shipped to the App Store.
+                    </p>
+                  </div>
+
+                  <div className="pt-4">
+                    <a
+                      href="https://apps.apple.com/app/seatech-solutions/id6753608647"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-37.6 16.4-65.9 50-86.5-18.8-26.9-46.6-41.8-82.5-44.8-34.7-2.9-72.7 20.7-86.3 20.7-14 0-48.7-19.7-75.5-19.2-39.1.6-72.3 22.6-91.1 57.4-39 67.9-10 168.5 28 223.6 18.6 26.9 40.8 57 70.1 55.8 27.8-1.1 38.5-18 72.3-18 33.4 0 43.4 18 73 17.5 30.3-.5 49.5-27.4 67.9-54.4 21.4-31.2 30.1-61.4 30.4-62.9-0.8-0.3-58.3-22.3-58.4-88.2zM257.5 85.6c15.9-19.3 26.6-46.1 23.7-72.9-22.9.9-50.6 15.2-66.9 34.5-14.7 17.1-27.6 44.9-24.2 71.1 25.7 2 52-13 67.4-32.7z" /></svg>
+                      View on App Store
+                    </a>
+                  </div>
+                </div>
+              </article>
+
             </div>
           </div>
         </section>
