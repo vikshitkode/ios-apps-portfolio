@@ -4,6 +4,7 @@ import Link from "next/link"
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react"
 
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("")
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
@@ -72,28 +73,38 @@ export default function Home() {
 
   return (
     <div className="min-h-screen text-foreground relative">
-      <header className="fixed top-0 left-0 right-0 z-50 
-                   bg-background/2 backdrop-blur-lg">
-        <nav className="max-w-4xl mx-auto px-8 lg:px-16 py-6">
-          <div className="flex items-center justify-center gap-12">
-            {[
-              { id: "intro", label: "HOME" },
-              { id: "work", label: "EXPERIENCE" },
-              { id: "resume", label: "RESUME" },
-              { id: "projects", label: "PROJECTS" },
-              { id: "connect", label: "CONNECT" },
-            ].map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-foreground ${activeSection === section.id ? "text-foreground" : "text-muted-foreground"
-                  }`}
-              >
-                {section.label}
-              </button>
-            ))}
-          </div>
-        </nav>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none">
+        {/* ✅ Frosted Glass Navigation Bar */}
+        <nav className="max-w-4xl mx-auto px-8 lg:px-16 py-6 flex justify-center">
+  <div
+    className="flex rounded-full p-1.5 border border-white/25 
+      backdrop-blur-2xl bg-white/10 
+      shadow-[0_8px_32px_rgba(31,38,135,0.25)]"
+  >
+    {[
+      { id: "intro", label: "HOME" },
+      { id: "work", label: "EXPERIENCE" },
+      { id: "resume", label: "RESUME" },
+      { id: "projects", label: "PROJECTS" },
+      { id: "connect", label: "CONNECT" },
+    ].map((section) => (
+      <button
+        key={section.id}
+        onClick={() => scrollToSection(section.id)}
+        className={`relative px-6 py-2 text-sm font-semibold rounded-full transition-all duration-300
+          ${
+            activeSection === section.id
+              ? "bg-white/90 text-gray-900 shadow-inner"
+              : "text-gray-700/90 hover:text-gray-900 hover:bg-white/40"
+          }`}
+      >
+        {section.label}
+      </button>
+    ))}
+  </div>
+</nav>
+
+
       </header>
 
       <main className="max-w-4xl mx-auto px-8 lg:px-16 pt-20">
@@ -688,8 +699,9 @@ export default function Home() {
         </footer>
       </main>
       {/* Animated background layer (non-interactive, behind content) */}
-      <div
-        aria-hidden="true"
+      {/* 🌄 macOS Tahoe Light Wallpaper Background */}
+<div
+  aria-hidden="true"
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
       >
         {/* moving wash (very subtle) */}
