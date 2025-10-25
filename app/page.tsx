@@ -76,11 +76,8 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none">
         {/* ✅ Frosted Glass Navigation Bar */}
         <nav className="max-w-4xl mx-auto px-8 lg:px-16 py-6 flex justify-center">
-  <div
-    className="flex rounded-full p-1.5 border border-white/25 
-      backdrop-blur-2xl bg-white/10 
-      shadow-[0_8px_32px_rgba(31,38,135,0.25)]"
-  >
+  <div className="flex rounded-full p-1.5 liquid-glass">
+
     {[
       { id: "intro", label: "HOME" },
       { id: "work", label: "EXPERIENCE" },
@@ -89,17 +86,18 @@ export default function Home() {
       { id: "connect", label: "CONNECT" },
     ].map((section) => (
       <button
-        key={section.id}
-        onClick={() => scrollToSection(section.id)}
-        className={`relative px-6 py-2 text-sm font-semibold rounded-full transition-all duration-300
-          ${
-            activeSection === section.id
-              ? "bg-white/90 text-gray-900 shadow-inner"
-              : "text-gray-700/90 hover:text-gray-900 hover:bg-white/40"
-          }`}
-      >
-        {section.label}
-      </button>
+  key={section.id}
+  onClick={() => scrollToSection(section.id)}
+  className={`relative px-6 py-2 text-sm font-semibold rounded-full transition-all duration-300
+    ${
+      activeSection === section.id
+        ? "bg-white/40 text-gray-900 shadow-inner transform scale-105"
+        : "text-gray-600"
+    }`}
+>
+  {section.label}
+</button>
+
     ))}
   </div>
 </nav>
@@ -700,24 +698,17 @@ export default function Home() {
       </main>
       {/* Animated background layer (non-interactive, behind content) */}
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
+{/* 🌄 macOS Tahoe Light Wallpaper Background */}
 <div
   aria-hidden="true"
-        className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
-      >
-        {/* moving wash (very subtle) */}
-        <div className="absolute inset-0 aurora-wash" />
+  className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage:
+      "url('https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/t/684c867aae56d87f60e88af1/1749845662143/macOS_Tahoe_Light.jpg')",
+    backgroundAttachment: "fixed",
+  }}
+/>
 
-        {/* soft blobs */}
-        <div className="absolute -top-24 -left-24 h-[42rem] w-[42rem] rounded-full blur-3xl opacity-40
-                  bg-pink-400/25 dark:bg-pink-500/20 animate-blob" />
-        <div className="absolute top-1/3 -right-24 h-[36rem] w-[36rem] rounded-full blur-3xl opacity-35
-                  bg-indigo-400/25 dark:bg-indigo-500/20 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-24 left-1/4 h-[40rem] w-[40rem] rounded-full blur-3xl opacity-35
-                  bg-emerald-400/25 dark:bg-emerald-500/20 animate-blob animation-delay-4000" />
-
-        {/* vignette to keep edges calm and text readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-      </div>
 
     </div>
   )
