@@ -76,32 +76,30 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-none">
         {/* ✅ Frosted Glass Navigation Bar */}
         <nav className="max-w-4xl mx-auto px-8 lg:px-16 py-6 flex justify-center">
-  <div className="flex rounded-full p-1.5 liquid-glass">
+          <div className="flex rounded-full p-1.5 liquid-glass">
 
-    {[
-      { id: "intro", label: "HOME" },
-      { id: "work", label: "EXPERIENCE" },
-      { id: "resume", label: "RESUME" },
-      { id: "projects", label: "PROJECTS" },
-      { id: "connect", label: "CONNECT" },
-    ].map((section) => (
-      <button
-  key={section.id}
-  onClick={() => scrollToSection(section.id)}
-  className={`relative px-6 py-2 text-sm font-semibold rounded-full transition-all duration-300
-    ${
-      activeSection === section.id
-        ? "bg-white/40 text-gray-900 shadow-inner transform scale-105"
-        : "text-gray-600"
-    }`}
->
-  {section.label}
-</button>
+            {[
+              { id: "intro", label: "HOME" },
+              { id: "work", label: "EXPERIENCE" },
+              { id: "resume", label: "RESUME" },
+              { id: "projects", label: "PROJECTS" },
+              { id: "connect", label: "CONNECT" },
+            ].map((section) => (
+              <button
+                key={section.id}
+                onClick={() => scrollToSection(section.id)}
+                className={`relative px-6 py-2 text-sm font-semibold rounded-full transition-all duration-300
+    ${activeSection === section.id
+                    ? "bg-white/40 text-gray-900 shadow-inner transform scale-105"
+                    : "text-gray-600"
+                  }`}
+              >
+                {section.label}
+              </button>
 
-    ))}
-  </div>
-</nav>
-
+            ))}
+          </div>
+        </nav>
 
       </header>
 
@@ -109,80 +107,81 @@ export default function Home() {
         <header
           id="intro"
           ref={setSectionRef(0)}
-          className="min-h-[80vh] flex items-center opacity-0"
+          className="min-h-[80vh] flex items-center"
+
         >
-          <div className="hero-glass w-[110%] max-w-none p-16">
-          <div className="grid lg:grid-cols-5 gap-16 w-full">
-            <div className="lg:col-span-3 space-y-8">
-              <div className="space-y-2">
-                <h1 className="text-6xl lg:text-7xl font-light tracking-tight">
-                  Sai Vikshit
-                  <br />
-                  <span className="text-muted-foreground">Kode</span>
-                </h1>
-              </div>
-
-              <div className="space-y-6 max-w-md">
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  iOS Developer crafting native mobile Applications with
-                  <span className="text-gradient-primary font-semibold"> Swift</span>,
-                  <span className="text-gradient-secondary font-semibold"> SwiftUI</span>, and
-                  <span className="text-gradient-primary font-semibold"> modern iOS frameworks</span>.
-                </p>
-
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
-                    Available for work
-                  </div>
-                  <div>Seattle, WA</div>
-                </div>
-
-                <button
-                  className="btn-gradient px-8 py-3 rounded-full font-medium text-white shadow-lg"
-                  onClick={() => scrollToSection("connect")}
-                  type="button"
-                  aria-controls="connect"
-                >
-                  Get In Touch
-                </button>
-              </div>
-            </div>
-
-            <div className="lg:col-span-2 flex flex-col justify-end space-y-8">
-              <div className="space-y-4">
-                <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
+          <div className="hero-glass max-w-none p-16">
+            <div className="grid lg:grid-cols-5 gap-16 w-full">
+              <div className="lg:col-span-3 space-y-8">
                 <div className="space-y-2">
-                  <div className="text-foreground">Freelance iOS Developer</div>
-                  <div className="text-muted-foreground">@ Indieveloper</div>
-                  <div className="text-xs text-muted-foreground">2021 — Present</div>
+                  <h1 className="text-6xl lg:text-7xl font-light tracking-tight">
+                    Sai Vikshit
+                    <br />
+                    <span className="text-muted-foreground">Kode</span>
+                  </h1>
+                </div>
+
+                <div className="space-y-6 max-w-md">
+                  <p className="text-xl text-muted-foreground leading-relaxed">
+                    iOS Developer crafting native mobile Applications with
+                    <span className="text-gradient-primary font-semibold"> Swift</span>,
+                    <span className="text-gradient-secondary font-semibold"> SwiftUI</span>, and
+                    <span className="text-gradient-primary font-semibold"> modern iOS frameworks</span>.
+                  </p>
+
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
+                      Available for work
+                    </div>
+                    <div>Seattle, WA</div>
+                  </div>
+
+                  <button
+                    className="btn-gradient px-8 py-3 rounded-full font-medium text-white shadow-lg"
+                    onClick={() => scrollToSection("connect")}
+                    type="button"
+                    aria-controls="connect"
+                  >
+                    Get In Touch
+                  </button>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "Swift",
-                    "SwiftUI",
-                    "UIKit",
-                    "SwiftData",
-                    "HealthKit",
-                    "MongoDB Realm",
-                    "Combine",
-                    "CloudKit",
-                    "MapKit",
-                    "XCTest",
-                    "Foundation ML"
-                  ].map((skill) => (
-                    <span key={skill} className="skill-tag-gradient px-3 py-1 text-xs rounded-full">
-                      {skill}
-                    </span>
-                  ))}
+              <div className="lg:col-span-2 flex flex-col justify-end space-y-8">
+                <div className="space-y-4">
+                  <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
+                  <div className="space-y-2">
+                    <div className="text-foreground">Freelance iOS Developer</div>
+                    <div className="text-muted-foreground">@ Indieveloper</div>
+                    <div className="text-xs text-muted-foreground">2021 — Present</div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Swift",
+                      "SwiftUI",
+                      "UIKit",
+                      "SwiftData",
+                      "HealthKit",
+                      "MongoDB Realm",
+                      "Combine",
+                      "CloudKit",
+                      "MapKit",
+                      "XCTest",
+                      "Foundation ML"
+                    ].map((skill) => (
+                      <span key={skill} className="skill-tag-gradient px-3 py-1 text-xs rounded-full">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           </div>
         </header>
 
@@ -700,16 +699,16 @@ export default function Home() {
       </main>
       {/* Animated background layer (non-interactive, behind content) */}
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
-{/* 🌄 macOS Tahoe Light Wallpaper Background */}
-<div
-  aria-hidden="true"
-  className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage:
-      "url('https://static1.squarespace.com/static/5e949a92e17d55230cd1d44f/t/684c867aae56d87f60e88af1/1749845662143/macOS_Tahoe_Light.jpg')",
-    backgroundAttachment: "fixed",
-  }}
-/>
+      {/* 🌄 macOS Tahoe Light Wallpaper Background */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://cbeditz.com/public/cbeditz/preview/bottle-blue-gradient-4k-full-hd-wallpaper-background-11624179920hd7g2gxkn9.jpg')",
+          backgroundAttachment: "fixed",
+        }}
+      />
 
 
     </div>
