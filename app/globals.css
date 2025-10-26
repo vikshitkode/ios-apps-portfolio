@@ -152,17 +152,32 @@
 
 .hero-glass {
   position: relative;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 
-  background: rgba(255, 255, 255, 0.25);
-  background-color: rgba(250, 250, 250, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(60px) saturate(180%);
-  -webkit-backdrop-filter: blur(60px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  /* ✅ Frosted glass background */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+
+  /* ✅ Inner glow & subtle depth */
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.25),
-    0 8px 32px rgba(31, 38, 135, 0.25);
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.25);
+
+  /* ✅ Do NOT apply blur to child text */
+  isolation: isolate;
+}
+
+.hero-glass * {
+  position: relative;
+  z-index: 1;
 }
 
 

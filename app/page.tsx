@@ -111,7 +111,7 @@ export default function Home() {
           ref={setSectionRef(0)}
           className="min-h-[80vh] flex items-center opacity-0"
         >
-          <div className="hero-glass w-full p-10 lg:p-16 rounded-3xl">
+          <div className="hero-glass w-[110%] max-w-none p-16">
           <div className="grid lg:grid-cols-5 gap-16 w-full">
             <div className="lg:col-span-3 space-y-8">
               <div className="space-y-2">
