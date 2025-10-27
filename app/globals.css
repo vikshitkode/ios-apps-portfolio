@@ -172,6 +172,60 @@
   color: rgba(15, 15, 15, 0.9);
 }
 
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow:
+    0 6px 6px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+  cursor: pointer;
+}
+
+.glass-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  filter: url(#liquid-glass);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+/* ✨ Add a highlight rim */
+.glass-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 0 5px rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+/* Keep your icons and text above everything */
+.glass-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover effects */
+.glass-card:hover {
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
 
   /* Gradient text colors */
   .text-gradient-primary {

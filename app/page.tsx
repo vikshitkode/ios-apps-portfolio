@@ -610,7 +610,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="text-sm text-muted-foreground font-mono">ELSEWHERE</div>
+              <div className="text-sm text-muted-foreground font-mono">SOCIAL</div>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -660,8 +660,9 @@ export default function Home() {
                   <Link
                     key={social.name}
                     href={social.url}
-                    className="group card-gradient-border p-4 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className="group glass-card p-4 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
+
                     <div className="space-y-2">
                       <div className="flex items-center gap-2 text-foreground transition-colors duration-300">
                         {social.icon}
@@ -674,6 +675,34 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* Add this just before your closing </section> */}
+<svg style={{ display: "none" }}>
+  <filter id="liquid-glass" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.01 0.02"
+      numOctaves="3"
+      seed="8"
+      result="noise"
+    >
+      <animate
+        attributeName="baseFrequency"
+        dur="6s"
+        values="0.01 0.02; 0.02 0.01; 0.01 0.02"
+        repeatCount="indefinite"
+      />
+    </feTurbulence>
+    <feGaussianBlur in="noise" stdDeviation="1" result="blurredNoise" />
+    <feDisplacementMap
+      in="SourceGraphic"
+      in2="blurredNoise"
+      scale="25"
+      xChannelSelector="R"
+      yChannelSelector="G"
+    />
+  </filter>
+</svg>
+
         </section>
 
         <footer className="py-16 border-t border-border">
