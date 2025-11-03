@@ -117,19 +117,19 @@ export default function Home() {
                   <h1 className="text-6xl lg:text-7xl font-light tracking-tight">
                     Sai Vikshit
                     <br />
-                    <span className="text-muted-foreground">Kode</span>
+                    <span className="">Kode</span>
                   </h1>
                 </div>
 
                 <div className="space-y-6 max-w-md">
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-xl  leading-relaxed">
                     iOS Developer crafting native mobile Applications with
                     <span className="text-gradient-primary font-semibold"> Swift</span>,
                     <span className="text-gradient-secondary font-semibold"> SwiftUI</span>, and
                     <span className="text-gradient-primary font-semibold"> modern iOS frameworks</span>.
                   </p>
 
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-4 text-sm ">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
                       Available for work
@@ -150,16 +150,16 @@ export default function Home() {
 
               <div className="lg:col-span-2 flex flex-col justify-end space-y-8">
                 <div className="space-y-4">
-                  <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
+                  <div className="text-sm  font-mono">CURRENTLY</div>
                   <div className="space-y-2">
                     <div className="text-foreground">Freelance iOS Developer</div>
-                    <div className="text-muted-foreground">@ Indieveloper</div>
-                    <div className="text-xs text-muted-foreground">2021 — Present</div>
+                    <div className="">@ Indieveloper</div>
+                    <div className="text-xs ">2021 — Present</div>
                   </div>
                 </div>
 
                 <div className="space-y-4">
-                  <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
+                  <div className="text-sm  font-mono">FOCUS</div>
                   <div className="flex flex-wrap gap-2">
                     {[
                       "Swift",
@@ -191,7 +191,7 @@ export default function Home() {
               <h2 className="text-4xl font-light">
                 <span className="text-gradient-primary">Experience</span>
               </h2>
-              <div className="text-sm text-muted-foreground font-mono">2021 — Present</div>
+              <div className="text-sm font-mono">2021 — Present</div>
             </div>
 
             <div className="space-y-12">
@@ -248,15 +248,15 @@ export default function Home() {
               ].map((job, index) => (
                 <div key={index} className="group card-gradient-border grid lg:grid-cols-12 gap-8 py-8 rounded-lg px-6">
                   <div className="lg:col-span-2">
-                    <div className="text-lg font-light text-muted-foreground">{job.year}</div>
+                    <div className="text-lg font-light  ">{job.year}</div>
                   </div>
 
                   <div className="lg:col-span-6 space-y-3">
                     <div>
                       <h3 className="text-xl font-medium">{job.role}</h3>
-                      <div className="text-muted-foreground">{job.company}</div>
+                      <div className="">{job.company}</div>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed max-w-lg">
+                    <p className=" leading-relaxed max-w-lg">
                       {job.description}
                     </p>
                   </div>
@@ -265,7 +265,7 @@ export default function Home() {
                     {job.tech.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 text-xs text-muted-foreground rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
+                        className="px-2 py-1 text-xs  rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
                       >
                         {tech}
                       </span>
@@ -284,7 +284,7 @@ export default function Home() {
               <h2 className="text-4xl font-light">
                 <span className="text-gradient-primary">Resume</span>
               </h2>
-              <div className="text-sm text-muted-foreground font-mono">Updated · 2025</div>
+              <div className="text-sm  font-mono">Updated · 2025</div>
             </div>
 
             <div className="grid lg:grid-cols-12 gap-8">
@@ -313,7 +313,7 @@ export default function Home() {
 
                     <div className="leading-tight">
                       <div className="font-semibold text-foreground">View</div>
-                      <div className="text-xs font-semibold text-muted-foreground">August 20, 2025</div>
+                      <div className="text-xs font-semibold ">August 20, 2025</div>
                     </div>
                   </a>
 
@@ -340,13 +340,13 @@ export default function Home() {
 
                     <div className="leading-tight">
                       <div className="font-semibold text-foreground">Download</div>
-                      <div className="text-xs font-semibold text-muted-foreground">August 20, 2025</div>
-                      <div className="text-xs font-semibold text-muted-foreground">8 KB</div>
+                      <div className="text-xs font-semibold ">August 20, 2025</div>
+                      <div className="text-xs font-semibold ">8 KB</div>
                     </div>
                   </a>
                 </div>
 
-                <div className="space-y-7 text-muted-foreground leading-relaxed h-full flex">
+                <div className="space-y-7  leading-relaxed h-full flex">
                   <div className="flex flex-col justify-between">
                     <h3 className="text-lg font-normal">
                       iOS Developer with hands-on experience building and shipping production-grade apps using Swift, SwiftUI, and UIKit. Skilled in
@@ -401,7 +401,7 @@ export default function Home() {
                   {/* Project Info */}
                   <div className="space-y-4">
                     <h3 className="text-xl font-medium">Step Buddy</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className=" leading-relaxed">
                       A comprehensive fitness tracking app that motivates users to stay active with step counting, goal
                       setting, and social challenges. Built with HealthKit integration for accurate health data.
                     </p>
@@ -461,7 +461,7 @@ export default function Home() {
                   {/* Project Info */}
                   <div className="space-y-4">
                     <h3 className="text-xl font-medium">War Card Game</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className=" leading-relaxed">
                       Classic card game reimagined for iOS with smooth animations, multiplayer support, and engaging
                       gameplay. Features custom card designs and intuitive touch controls.
                     </p>
@@ -505,9 +505,9 @@ export default function Home() {
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-medium">CulinAI</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      On-device recipe generator powered by Apple’s Foundation Models. Turn a few ingredients into beautiful,
-                      step-by-step recipes—private, fast, offline.
+                    <p className=" leading-relaxed">
+                      On-device recipe generator powered by Apple’s Foundation Models. Turn a few ingredients into beautiful
+                      step-by-step recipes private, fast, offline.
                     </p>
                   </div>
 
@@ -548,8 +548,8 @@ export default function Home() {
 
                   <div className="space-y-4">
                     <h3 className="text-xl font-medium">SeaTech Solutions</h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Consulting companion app showcasing services, contact, and quick actions—built with SwiftUI and shipped to the App Store.
+                    <p className=" leading-relaxed">
+                      Consulting companion app showcasing services, contact, and quick actions built with SwiftUI and shipped to the App Store.
                     </p>
                   </div>
 
@@ -586,7 +586,7 @@ export default function Home() {
               </h2>
 
               <div className="space-y-6">
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl  leading-relaxed">
                   Always interested in new iOS projects, collaborations, and conversations about mobile development.
                 </p>
 
@@ -610,7 +610,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="text-sm text-muted-foreground font-mono">SOCIAL</div>
+              <div className="text-sm  font-mono">SOCIAL</div>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -708,14 +708,13 @@ export default function Home() {
         <footer className="py-16 border-t border-border">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
             <div className="space-y-2">
-              <div className="text-sm text-muted-foreground">© 2025 Sai Vikshit Kode. All rights reserved.</div>
-              <div className="text-xs text-muted-foreground">Built with Next.js</div>
+              <div className="text-sm ">© Sai Vikshit Kode. All rights reserved.</div>
             </div>
 
 
             <button className="group p-3 rounded-lg">
               <Image
-                src="https://upload.wikimedia.org/wikipedia/commons/8/84/Apple_Computer_Logo_rainbow.svg"
+                src="https://cdn-icons-png.flaticon.com/512/0/747.png"
                 alt="Apple Rainbow Logo"
                 width={24}
                 height={24}
