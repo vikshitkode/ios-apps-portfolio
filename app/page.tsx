@@ -123,7 +123,7 @@ export default function Home() {
 
                 <div className="space-y-6 max-w-md">
                   <p className="text-xl  leading-relaxed">
-                    iOS Developer crafting native mobile Applications with
+                    iOS Developer building native mobile Applications with
                     <span className="text-gradient-primary font-semibold"> Swift</span>,
                     <span className="text-gradient-secondary font-semibold"> SwiftUI</span>, and
                     <span className="text-gradient-primary font-semibold"> modern iOS frameworks</span>.
@@ -132,9 +132,8 @@ export default function Home() {
                   <div className="flex items-center gap-4 text-sm ">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse shadow-lg shadow-green-400/50"></div>
-                      Available for work
+                      Available for Full Time Opportunities
                     </div>
-                    <div>Seattle, WA</div>
                   </div>
 
                   <button
@@ -152,8 +151,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <div className="text-sm  font-mono">CURRENTLY</div>
                   <div className="space-y-2">
-                    <div className="text-foreground">Freelance iOS Developer</div>
-                    <div className="">@ Indieveloper</div>
+                    <div className="text-foreground">iOS Developer @Alervio</div>
                     <div className="text-xs ">2021 — Present</div>
                   </div>
                 </div>
