@@ -509,6 +509,25 @@ export default function Home() {
                     </p>
                   </div>
 
+                  {/* GitHub Link */}
+                  <div className="pt-4">
+                    <a
+                      href="https://github.com/vikshitkode/CulinAI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        console.log("[v0] CulinAI GitHub link clicked")
+                        console.log("[v0] Link href:", e.currentTarget.href)
+                      }}
+                      className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105 relative z-10 cursor-pointer"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                      View on GitHub
+                    </a>
+                  </div>
+
                   {/* App Store Link */}
                   <div className="pt-2">
                     <a
@@ -529,6 +548,74 @@ export default function Home() {
                   </div>
                 </div>
               </article>
+
+              <article className="group card-gradient-border p-8 rounded-lg">
+                <div className="space-y-6 text-center">
+
+                  {/* App Icon */}
+                  <div className="flex justify-center">
+                    <Image
+                      src="https://li60ew8krwcpxb78.public.blob.vercel-storage.com/caty-iOS-Default-1024x1024%401x.png"
+                      alt="MyCatzy App Icon"
+                      width={160}
+                      height={160}
+                      className="rounded-2xl object-contain"
+                    />
+                  </div>
+
+                  {/* Project Info */}
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-medium">MyCatzy</h3>
+                    <p className="leading-relaxed">
+                      Meet MyCat, your cheerful companion that brings you a new cat every day,
+                      adorable photos, fun facts, and lovable personalities all in one
+                      beautifully designed app.
+                    </p>
+                  </div>
+
+                  {/* Links (Matching StepBuddy layout) */}
+                  <div className="pt-4">
+
+                    {/* GitHub Link */}
+                    <a
+                      href="https://github.com/vikshitkode/MyCat"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        console.log("[v0] MyCatzy GitHub link clicked")
+                        console.log("[v0] Link href:", e.currentTarget.href)
+                      }}
+                      className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105 relative z-10 cursor-pointer"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                      View on GitHub
+                    </a>
+
+                    </div>
+<div className="pt-2">
+                    {/* App Store Link */}
+                    <a
+                      href="https://apps.apple.com/us/app/seatech-solutions/id6753608647"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => {
+                        console.log("[v0] MyCatzy App Store link clicked")
+                        console.log("[v0] Link href:", e.currentTarget.href)
+                      }}
+                      className="inline-flex items-center gap-2 text-sm group-hover:text-foreground transition-all duration-300 hover:scale-105 relative z-10 cursor-pointer"
+                    >
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 384 512">
+                        <path d="M318.7 268.7c-.2-37.6 16.4-65.9 50-86.5-18.8-26.9-46.6-41.8-82.5-44.8-34.7-2.9-72.7 20.7-86.3 20.7-14 0-48.7-19.7-75.5-19.2-39.1.6-72.3 22.6-91.1 57.4-39 67.9-10 168.5 28 223.6 18.6 26.9 40.8 57 70.1 55.8 27.8-1.1 38.5-18 72.3-18 33.4 0 43.4 18 73 17.5 30.3-.5 49.5-27.4 67.9-54.4 21.4-31.2 30.1-61.4 30.4-62.9-0.8-0.3-58.3-22.3-58.4-88.2zM257.5 85.6c15.9-19.3 26.6-46.1 23.7-72.9-22.9.9-50.6 15.2-66.9 34.5-14.7 17.1-27.6 44.9-24.2 71.1 25.7 2 52-13 67.4-32.7z" />
+                      </svg>
+                      View on App Store
+                    </a>
+
+                  </div>
+                </div>
+              </article>
+
 
               {/* NEW: SeaTech Solutions */}
               <article className="group card-gradient-border p-8 rounded-lg">
@@ -674,32 +761,32 @@ export default function Home() {
             </div>
           </div>
           {/* Add this just before your closing </section> */}
-<svg style={{ display: "none" }}>
-  <filter id="liquid-glass" x="0%" y="0%" width="100%" height="100%">
-    <feTurbulence
-      type="fractalNoise"
-      baseFrequency="0.01 0.02"
-      numOctaves="3"
-      seed="8"
-      result="noise"
-    >
-      <animate
-        attributeName="baseFrequency"
-        dur="6s"
-        values="0.01 0.02; 0.02 0.01; 0.01 0.02"
-        repeatCount="indefinite"
-      />
-    </feTurbulence>
-    <feGaussianBlur in="noise" stdDeviation="1" result="blurredNoise" />
-    <feDisplacementMap
-      in="SourceGraphic"
-      in2="blurredNoise"
-      scale="25"
-      xChannelSelector="R"
-      yChannelSelector="G"
-    />
-  </filter>
-</svg>
+          <svg style={{ display: "none" }}>
+            <filter id="liquid-glass" x="0%" y="0%" width="100%" height="100%">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.01 0.02"
+                numOctaves="3"
+                seed="8"
+                result="noise"
+              >
+                <animate
+                  attributeName="baseFrequency"
+                  dur="6s"
+                  values="0.01 0.02; 0.02 0.01; 0.01 0.02"
+                  repeatCount="indefinite"
+                />
+              </feTurbulence>
+              <feGaussianBlur in="noise" stdDeviation="1" result="blurredNoise" />
+              <feDisplacementMap
+                in="SourceGraphic"
+                in2="blurredNoise"
+                scale="25"
+                xChannelSelector="R"
+                yChannelSelector="G"
+              />
+            </filter>
+          </svg>
 
         </section>
 
