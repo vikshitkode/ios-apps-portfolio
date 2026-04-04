@@ -425,14 +425,21 @@ export default function Home() {
 
               {/* Right: Embedded preview */}
               <div className="lg:col-span-7">
-                <div className="card-gradient-border rounded-lg overflow-hidden bg-white">
-                  <iframe
-                    src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
-                    className="block w-full h-[100vh] border-0 bg-white"
-                    title="Resume PDF"
-                  />
-                </div>
-              </div>
+        <div className="card-gradient-border rounded-2xl overflow-hidden bg-white shadow-xl">
+          <div className="flex items-center justify-between border-b px-4 py-3 bg-neutral-50">
+            <div className="text-sm font-medium text-neutral-700">
+              Resume
+            </div>
+            <div className="text-xs font-mono text-neutral-500">PDF</div>
+          </div>
+
+          <iframe
+            src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
+            className="block w-full h-[80vh] border-0 bg-white"
+            title="Resume PDF"
+          />
+        </div>
+      </div>
             </div>
           </div>
         </section>
