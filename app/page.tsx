@@ -444,7 +444,7 @@ export default function Home() {
         >
           <div className="space-y-16 w-full">
             <h2 className="text-4xl font-light text-center">
-              Personal <span className="text-gradient-secondary">iOS Apps</span>
+              Personal <span className="text-gradient-primary">iOS Apps</span>
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12">
@@ -609,7 +609,7 @@ export default function Home() {
                       </svg>
                       View on GitHub
                     </a>
-                  </div>
+                  
 
                   {/* App Store Link */}
                   <div className="pt-2">
@@ -633,6 +633,7 @@ export default function Home() {
                       View on App Store
                     </a>
                   </div>
+                </div>
                 </div>
               </article>
 
@@ -659,7 +660,6 @@ export default function Home() {
                     </p>
                   </div>
 
-                  {/* Links (Matching StepBuddy layout) */}
                   <div className="pt-4">
                     {/* GitHub Link */}
                     <a
