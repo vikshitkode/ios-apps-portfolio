@@ -149,10 +149,10 @@ export default function Home() {
 
               <div className="lg:col-span-2 flex flex-col justify-end space-y-8">
                 <div className="space-y-4">
-                  <div className="text-sm  font-mono">CURRENTLY</div>
+                  <div className="text-sm  font-mono">Currently</div>
                   <div className="space-y-2">
-                    <div className="text-foreground">iOS Developer @Alervio</div>
-                    <div className="text-xs ">2021 — Present</div>
+                    <div className="text-foreground">iOS Developer @Uber</div>
+                    <div className="text-xs ">2026 — Present</div>
                   </div>
                 </div>
 
