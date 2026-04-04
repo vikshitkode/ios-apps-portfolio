@@ -321,167 +321,121 @@ export default function Home() {
         </section>
 
         <section
-  id="resume"
-  ref={setSectionRef(2)}
-  className="py-28 opacity-0 min-h-screen"
->
-  <div className="space-y-12">
-    {/* Header */}
-    <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-      <div className="space-y-2">
-        <p className="text-sm font-mono uppercase tracking-[0.2em] text-muted-foreground">
-          Professional Snapshot
-        </p>
-        <h2 className="text-4xl md:text-5xl font-light">
-          <span className="text-gradient-primary">Resume</span>
-        </h2>
-      </div>
-
-      <div className="text-sm font-mono text-muted-foreground">
-        Updated · 2026
-      </div>
-    </div>
-
-    <div className="grid lg:grid-cols-12 gap-8 items-start">
-      {/* Left Column */}
-      <div className="lg:col-span-5 space-y-6">
-        {/* Summary Card */}
-        <div className="card-gradient-border rounded-2xl p-6 md:p-7">
-          <div className="space-y-5">
-            <div className="space-y-3">
-              <div className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium text-muted-foreground">
-                iOS Developer · Uber
-              </div>
-
-              <h3 className="text-2xl font-medium leading-tight">
-                Building reliable, scalable iOS experiences for millions of users.
-              </h3>
-
-              <p className="text-sm md:text-base leading-7 text-muted-foreground">
-                I work on Uber’s Earners App using Swift, UIKit, and RIBs
-                architecture, shipping modular, high-performance features across
-                authentication, real-time data flows, and optimized UI experiences.
-                My focus is on product quality, debugging, crash analysis, and
-                delivering polished user-centric systems at scale.
-              </p>
+          id="resume"
+          ref={setSectionRef(2)}
+          className="py-32 opacity-0 min-h-screen"
+        >
+          <div className="space-y-10">
+            <div className="flex items-end justify-between">
+              <h2 className="text-4xl font-light">
+                <span className="text-gradient-primary">Resume</span>
+              </h2>
+              <div className="text-sm  font-mono">Updated · 2026</div>
             </div>
 
-            {/* Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <div className="rounded-xl border p-4">
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                  Stack
+            <div className="grid lg:grid-cols-12 gap-8">
+              {/* Left: Actions + Highlights */}
+              <div className="lg:col-span-5 space-y-6">
+                <div className="flex gap-8">
+                  {/* View (link card like screenshot) */}
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-start gap-3 rounded-md"
+                    aria-label="View Resume PDF"
+                  >
+                    {/* up-right arrow (no circle) */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-1 h-4 w-4 text-blue-500 group-hover:text-blue-600 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path d="M6 18L18 6" strokeLinecap="round" />
+                      <path
+                        d="M11 6h7v7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    <div className="leading-tight">
+                      <div className="font-semibold text-foreground">View</div>
+                      <div className="text-xs font-semibold ">
+                        August 20, 2025
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="/resume.pdf"
+                    download
+                    className="group flex items-start gap-3 rounded-md"
+                    aria-label="Download Resume PDF"
+                  >
+                    {/* download arrow + circle */}
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="mt-0.5 h-5 w-5 text-blue-500 group-hover:text-blue-600 transition-colors"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      {/* Circle outline */}
+                      <circle cx="12" cy="12" r="10" />
+                      {/* Arrow down */}
+                      <path
+                        d="M12 8v8m0 0l-3-3m3 3l3-3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+
+                    <div className="leading-tight">
+                      <div className="font-semibold text-foreground">
+                        Download
+                      </div>
+                      <div className="text-xs font-semibold ">
+                        August 20, 2025
+                      </div>
+                      <div className="text-xs font-semibold ">8 KB</div>
+                    </div>
+                  </a>
                 </div>
-                <div className="mt-2 text-sm font-medium">
-                  Swift · UIKit · RIBs
+
+                <div className="space-y-7  leading-relaxed h-full flex">
+                  <div className="flex flex-col justify-between">
+                    <h3 className="text-lg font-normal">
+                      iOS Developer at Uber working on the Earners App, building
+                      scalable, high-performance features using Swift, UIKit,
+                      and RIBs architecture. Focused on delivering reliable,
+                      modular code for large-scale systems serving millions of
+                      users, including authentication, real-time data flows, and
+                      optimized UI experiences. Improve app stability through
+                      debugging, crash analysis, and iterative releases, while
+                      collaborating cross-functionally to ship impactful
+                      features. Passionate about building resilient,
+                      user-centric mobile systems at scale.
+                    </h3>
+                  </div>
                 </div>
               </div>
 
-              <div className="rounded-xl border p-4">
-                <div className="text-xs uppercase tracking-wide text-muted-foreground">
-                  Focus
-                </div>
-                <div className="mt-2 text-sm font-medium">
-                  Scale · Performance · Stability
+              {/* Right: Embedded preview */}
+              <div className="lg:col-span-7">
+                <div className="card-gradient-border rounded-lg overflow-hidden bg-white">
+                  <iframe
+                    src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
+                    className="block w-full h-[100vh] border-0 bg-white"
+                    title="Resume PDF"
+                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="grid sm:grid-cols-2 gap-4">
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group rounded-2xl border p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            aria-label="View Resume PDF"
-          >
-            <div className="flex items-start justify-between">
-              <div className="space-y-2">
-                <div className="text-lg font-semibold text-foreground">View Resume</div>
-                <div className="text-sm text-muted-foreground">
-                  Open PDF in a new tab
-                </div>
-                <div className="text-xs font-mono text-muted-foreground">
-                  Updated · 2026
-                </div>
-              </div>
-
-              <svg
-                viewBox="0 0 24 24"
-                className="h-5 w-5 text-blue-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path d="M6 18L18 6" strokeLinecap="round" />
-                <path
-                  d="M11 6h7v7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-          </a>
-
-          <a
-            href="/resume.pdf"
-            download
-            className="group rounded-2xl border p-5 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-            aria-label="Download Resume PDF"
-          >
-            <div className="flex items-start justify-between">
-              <div className="space-y-2">
-                <div className="text-lg font-semibold text-foreground">Download</div>
-                <div className="text-sm text-muted-foreground">
-                  Save a local copy
-                </div>
-                <div className="text-xs font-mono text-muted-foreground">
-                  PDF
-                </div>
-              </div>
-
-              <svg
-                viewBox="0 0 24 24"
-                className="h-5 w-5 text-blue-500 group-hover:translate-y-0.5 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <path
-                  d="M12 4v10m0 0l-4-4m4 4l4-4"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path d="M5 20h14" strokeLinecap="round" />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      {/* Right Column */}
-      <div className="lg:col-span-7">
-        <div className="card-gradient-border rounded-2xl overflow-hidden bg-white shadow-xl">
-          <div className="flex items-center justify-between border-b px-4 py-3 bg-neutral-50">
-            <div className="text-sm font-medium text-neutral-700">
-              Resume Preview
-            </div>
-            <div className="text-xs font-mono text-neutral-500">PDF</div>
-          </div>
-
-          <iframe
-            src="/resume.pdf#zoom=page-width&toolbar=0&navpanes=0&pagemode=none&page=1"
-            className="block w-full h-[80vh] border-0 bg-white"
-            title="Resume PDF"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         <section
           id="projects"
