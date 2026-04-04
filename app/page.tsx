@@ -408,18 +408,16 @@ export default function Home() {
                 <div className="space-y-7  leading-relaxed h-full flex">
                   <div className="flex flex-col justify-between">
                     <h3 className="text-lg font-normal">
-                      iOS Developer with hands-on experience building and
-                      shipping production-grade apps using Swift, SwiftUI, and
-                      UIKit. Skilled in MVVM/MVI architecture, RESTful API
-                      integration, and fitness-focused features powered by
-                      HealthKit, Charts, and SwiftData. Published multiple apps
-                      to the App Store, including a HealthKit-powered fitness
-                      tracker (StepBuddy), achieving 95%+ crash-free sessions.
-                      Experienced in TestFlight/App Store releases, Firebase
-                      crash monitoring, and iterative improvements. Passionate
-                      about building data-informed, iterative fitness and
-                      performance visualizations (VO2 Max, heart rate zones,
-                      recovery trends) that unlock human potential.
+                      iOS Developer at Uber working on the Earners App, building
+                      scalable, high-performance features using Swift, UIKit,
+                      and RIBs architecture. Focused on delivering reliable,
+                      modular code for large-scale systems serving millions of
+                      users, including authentication, real-time data flows, and
+                      optimized UI experiences. Improve app stability through
+                      debugging, crash analysis, and iterative releases, while
+                      collaborating cross-functionally to ship impactful
+                      features. Passionate about building resilient,
+                      user-centric mobile systems at scale.
                     </h3>
                   </div>
                 </div>
@@ -804,7 +802,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-8">
-              <div className="text-sm  font-mono">SOCIAL</div>
+              <div className="text-sm  font-mono">Social</div>
 
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -866,6 +864,8 @@ export default function Home() {
                   <Link
                     key={social.name}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group glass-card p-4 rounded-lg hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     <div className="space-y-2">
