@@ -922,11 +922,12 @@ export default function Home() {
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
       <div
-        aria-hidden="true"
+  aria-hidden="true"
   className="pointer-events-none fixed inset-0 -z-10"
   style={{
     background: "linear-gradient(135deg, #0f0f0f, #1a1a1a, #2a2a2a)",
   }}
+/>
     </div>
   );
 }
