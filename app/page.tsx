@@ -922,12 +922,14 @@ export default function Home() {
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
       {/* 🌄 macOS Tahoe Light Wallpaper Background */}
       <div
-  aria-hidden="true"
-  className="pointer-events-none fixed inset-0 -z-10"
-  style={{
-    background: "linear-gradient(135deg, #0f0f0f, #1a1a1a, #2a2a2a)",
-  }}
-/>
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage:
+            "url('https://cbeditz.com/public/cbeditz/preview/bottle-blue-gradient-4k-full-hd-wallpaper-background-11624179920hd7g2gxkn9.jpg')",
+          backgroundAttachment: "fixed",
+        }}
+      />
     </div>
   );
 }
